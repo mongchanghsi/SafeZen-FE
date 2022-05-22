@@ -1,0 +1,119 @@
+@import '../styles/variables.module.scss';
+@import '../styles/mixin.module.scss';
+
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-top: 4rem;
+
+  @include l {
+    margin-top: 6.9rem;
+  }
+
+  & h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: $black;
+
+    @include l {
+      margin-bottom: 2rem;
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  & button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: $black;
+    padding: 0.5rem;
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: transparent;
+    border: 0.2rem solid $black;
+    border-radius: 1rem;
+    letter-spacing: 0.05em;
+
+    cursor: pointer;
+
+    font-size: 1.4rem;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+
+    @include l {
+      font-size: 1.8rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+
+  & div {
+    flex: 1;
+  }
+
+  & img {
+    height: 40rem;
+  }
+
+  &_details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 2rem;
+
+    & p {
+      margin: 0.5rem;
+      margin-left: 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: $black;
+      font-size: 1.8rem;
+      text-align: left;
+    }
+  }
+}
+
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+  animation: ellipsis steps(4, end) 900ms infinite;
+  content: '\2026'; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 20px;
+  }
+}

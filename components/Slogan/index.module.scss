@@ -1,0 +1,23 @@
+@import '../../styles/variables.module.scss';
+@import '../../styles/mixin.module.scss';
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  & h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 2.4rem;
+    color: $black;
+
+    @include l {
+      font-size: 3.2rem;
+    }
+  }
+}

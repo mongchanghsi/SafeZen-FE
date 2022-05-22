@@ -1,0 +1,21 @@
+$black: #000000;
+$white: #ffffff;
+
+$light: #dee4e7;
+$dark: #37474f;
+
+$screen-xs: 320px;
+$screen-s: 480px;
+$screen-m: 768px;
+$screen-l: 1024px;
+$screen-xl: 1200px;
+$screen-xxl: 1450px;
+
+:export {
+  screenXS: $screen-xs;
+  screenS: $screen-s;
+  screenM: $screen-m;
+  screenL: $screen-l;
+  screenXL: $screen-xl;
+  screenXXL: $screen-xxl;
+}
